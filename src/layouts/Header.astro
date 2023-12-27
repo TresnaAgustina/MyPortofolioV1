@@ -1,0 +1,152 @@
+---
+import CloseToggle from "../components/CloseToggle.astro";
+---
+
+<nav class="w-full h-auto fixed top-0 py-6 z-[45]">
+  <!-- Nav Wrapper -->
+  <div
+    class="container 2xl:w-[70%] mx-auto px-4 py-0 flex items-center justify-between"
+  >
+    <!-- Logo -->
+    <div id="logo_wrapper">
+      <a href="/" id="logo">
+        <img
+          class="md:hidden"
+          src="/assets/images/m-logo.png"
+          alt="Logo Images"
+        />
+        <img
+          class="hidden md:block"
+          src="/assets/images/d-logo.png"
+          alt="Logo Images"
+        />
+      </a>
+    </div>
+    <!-- End Logo -->
+
+    <!-- Mobile Menu -->
+    <div
+      class="m_menu_container w-full h-screen absolute top-0 z-50 bg-secondary"
+    >
+      <div class="main"></div>
+      <!-- inner wrapper -->
+      <div
+        class="w-full h-full px-14 md:container md:mx-auto flex flex-col items-center justify-start gap-4"
+      >
+        <!-- close toggle -->
+        <div
+          class="w-full h-auto py-8 flex items-end justify-end md:items-start md:justify-start"
+          id="close_toggle"
+        >
+          <CloseToggle
+            style="close_btn fill-[#1a1a1a] w-10 md:w-12 hover:fill-primary cursor-pointer hover:scale-105 transition-transform duration-300 ease-linear"
+          />
+        </div>
+
+        <!-- logo image -->
+        <!-- <img
+          class="w-22"
+          src="/assets/images/m-nav-logo.png"
+          alt="m_nav_logo"
+        /> -->
+
+        <!-- nav link -->
+        <div class="self-start mt-10" id="m_menu_content">
+          <h4 class="text-[14px] md:text-lg text-p givonic-reg">Navigation</h4>
+          <ul class="flex flex-col gap-8 mt-4">
+            <li
+              class="text-5xl md:text-6xl lg:text-8xl text-text relative w-fit block after:block after:content-[''] after:absolute after:h-[3px] after:bg-primary after:w-full after:scale-x-0 after:hover:scale-x-100 after:transition after:duration-300 after:origin-center"
+            >
+              <a class="link-text nav-link" href="/projects">Portfolio</a>
+            </li>
+            <li
+              class="text-5xl md:text-6xl lg:text-8xl text-text relative w-fit block after:block after:content-[''] after:absolute after:h-[3px] after:bg-primary after:w-full after:scale-x-0 after:hover:scale-x-100 after:transition after:duration-300 after:origin-center"
+            >
+              <a class="link-text nav-link" href="/certificates">Certificates</a
+              >
+            </li>
+          </ul>
+        </div>
+
+        <!-- social link -->
+        <div
+          class="absolute bottom-0 w-full left-0 pl-14 md:pl-16 xl:pl-28 pb-16"
+          id="m_menu_content"
+        >
+          <div class="w-full h-auto container mx-auto">
+            <h4 class="text-[14px] text-p givonic-reg">Socials</h4>
+            <ul class="flex gap-6 mt-4">
+              <li
+                class="text-lg relative w-fit block after:block after:content-[''] after:absolute after:h-[1px] after:bg-primary after:w-full after:scale-x-0 after:hover:scale-x-100 after:transition after:duration-300 after:origin-center"
+              >
+                <a class="givonic-reg text-base hover:text-primary" href="#"
+                  >LinkedIn</a
+                >
+              </li>
+              <li
+                class="text-lg relative w-fit block after:block after:content-[''] after:absolute after:h-[1px] after:bg-primary after:w-full after:scale-x-0 after:hover:scale-x-100 after:transition after:duration-300 after:origin-center"
+              >
+                <a class="givonic-reg text-base hover:text-primary" href="#"
+                  >Instagram</a
+                >
+              </li>
+              <li
+                class="text-lg relative w-fit block after:block after:content-[''] after:absolute after:h-[1px] after:bg-primary after:w-full after:scale-x-0 after:hover:scale-x-100 after:transition after:duration-300 after:origin-center"
+              >
+                <a class="givonic-reg text-base hover:text-primary" href="#"
+                  >Github</a
+                >
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- End Mobile Menu -->
+
+    <!-- Desktop Menu -->
+    <div class="hidden md:flex flex-row" id="deskMenu">
+      <ul class="flex gap-12">
+        <li>
+          <a
+            class="text-lg xl:text-xl givonic-reg text-text hover:text-primary relative w-fit block after:block after:content-[''] after:absolute after:h-[1px] after:bg-primary after:w-full after:scale-x-0 after:hover:scale-x-100 after:transition after:duration-300 after:origin-center"
+            href="/projects"
+            class="">Portfolio</a
+          >
+        </li>
+        <li>
+          <a
+            class="text-lg xl:text-xl givonic-reg text-text hover:text-primary relative w-fit block after:block after:content-[''] after:absolute after:h-[1px] after:bg-primary after:w-full after:scale-x-0 after:hover:scale-x-100 after:transition after:duration-300 after:origin-center"
+            href="/certificates"
+            class="">Certificates</a
+          >
+        </li>
+      </ul>
+    </div>
+    <!-- End Desktop Menu -->
+
+    <!-- Nav Toggle -->
+    <div class="menu_btn p-4 flex items-center gap-1 md:hidden cursor-pointer">
+      <div class="w-2 h-2 rounded-full bg-[#1a1a1a]"></div> Menu
+    </div>
+    <div
+      class="menu_btn2 img-wraper p-3 bg-primary rounded-full fixed flex items-center cursor-pointer"
+      data-tilt
+      data-tilt-scale="1.2"
+      id="navToggle"
+    >
+      <svg
+        width="32"
+        height="32"
+        viewBox="0 0 32 32"
+        class="fill-secondary btn-icon"
+        fill="none"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          d="M28 15V17C28 17.2652 27.8946 17.5196 27.7071 17.7071C27.5196 17.8946 27.2652 18 27 18H5C4.73478 18 4.48043 17.8946 4.29289 17.7071C4.10536 17.5196 4 17.2652 4 17V15C4 14.7348 4.10536 14.4804 4.29289 14.2929C4.48043 14.1054 4.73478 14 5 14H27C27.2652 14 27.5196 14.1054 27.7071 14.2929C27.8946 14.4804 28 14.7348 28 15ZM27 22H5C4.73478 22 4.48043 22.1054 4.29289 22.2929C4.10536 22.4804 4 22.7348 4 23V25C4 25.2652 4.10536 25.5196 4.29289 25.7071C4.48043 25.8946 4.73478 26 5 26H27C27.2652 26 27.5196 25.8946 27.7071 25.7071C27.8946 25.5196 28 25.2652 28 25V23C28 22.7348 27.8946 22.4804 27.7071 22.2929C27.5196 22.1054 27.2652 22 27 22ZM27 6H5C4.73478 6 4.48043 6.10536 4.29289 6.29289C4.10536 6.48043 4 6.73478 4 7V9C4 9.26522 4.10536 9.51957 4.29289 9.70711C4.48043 9.89464 4.73478 10 5 10H27C27.2652 10 27.5196 9.89464 27.7071 9.70711C27.8946 9.51957 28 9.26522 28 9V7C28 6.73478 27.8946 6.48043 27.7071 6.29289C27.5196 6.10536 27.2652 6 27 6Z"
+        ></path>
+      </svg>
+    </div>
+  </div>
+</nav>

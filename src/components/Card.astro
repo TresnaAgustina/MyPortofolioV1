@@ -1,0 +1,49 @@
+---
+interface Props {
+  title: string;
+  description: string;
+  link: string;
+  image: string;
+  year: string;
+  category: string;
+  backgroundColor: string;
+}
+
+const { link, title, description, image, year, category, backgroundColor } =
+  Astro.props;
+---
+
+<!-- single card -->
+<div class="cursor-pointer">
+  <!-- inner wrapper -->
+  <div class="">
+    <!-- card image -->
+    <a href={link}>
+      <div
+        class=`${backgroundColor} p-14 lg:p-20 img-wraper`
+        data-tilt
+        data-tilt-glare
+        data-tilt-scale="0.95"
+        data-tilt-max-glare="0.8"
+      >
+        <img
+          src="/assets/images/bg-ornamen.svg"
+          alt=""
+          class="h-32 lg:h-52 w-auto absolute z-0 rotate-[85deg] bottom-4 right-4"
+        />
+        <img class="img-card" src={image} alt="" class="" />
+      </div>
+    </a>
+
+    <!-- card content -->
+    <a href={link}>
+      <div class="mt-4">
+        <h1 class="text-3xl givonic-semi text-text">{title}</h1>
+        <div class="flex justify-between items-center mt-2">
+          <p class="text-lg text-p givonic-reg">{category}</p>
+          <p class="text-lg text-p givonic-reg">{year}</p>
+        </div>
+      </div>
+    </a>
+  </div>
+</div>

@@ -1,0 +1,29 @@
+---
+import Card from "../components/Card.astro";
+
+import { project } from "../config/projects.js";
+---
+
+<section class="w-full h-full mb-28">
+  <div class="container xl:w-[70%] mx-auto">
+    <h1 class="text-8xl givonic-semi">
+      My <br /><span class="text-primary">Projects</span>
+    </h1>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mt-8">
+      {
+        project.map((item) => (
+          <Card
+            title={item.title}
+            description={item.description}
+            image={item.image}
+            link={item.link}
+            year={item.year}
+            category={item.category}
+            backgroundColor={item.backgroundColor}
+          />
+        ))
+      }
+    </div>
+  </div>
+</section>

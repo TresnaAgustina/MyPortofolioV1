@@ -1,0 +1,81 @@
+---
+import SkillBox from "../components/SkillBox.astro";
+---
+
+<section
+  class="w-full h-screen flex flex-col justify-center items-center mt-10"
+>
+  <!-- title -->
+  <div class="container relative mx-auto text-center" id="headerText">
+    <h1 class="days-one text-5xl sm:text-6xl md:text-8xl tracking-wide">
+      UI<span class="text-primary">/</span>UX <span class="text-primary">&</span
+      ><br />BACK-END
+    </h1>
+  </div>
+
+  <!-- banner -->
+  <div
+    class="relative w-full h-[50%] sm:h-auto overlay bg-primary overflow-hidden mx-auto"
+  >
+    <div class="background flex justify-center items-center">
+      <div class="w-full h-full flex justify-center items-end overlay">
+        <img
+          class="z-20 min-w-[20rem]"
+          src="/assets/images/MyPhoto.png"
+          alt=""
+        />
+
+        <!-- parallax -->
+        <div class="w-auto h-full absolute top-0 flex items-end" id="scene">
+          <div data-depth="0.4" class="mx-auto">
+            <img
+              class="w-10 h-auto md:w-full min-w-[22rem] z-50 blur-[1px]"
+              src="/assets/images/bg-ornamen.svg"
+              alt=""
+            />
+          </div>
+        </div>
+        <!-- end parallax -->
+      </div>
+
+      <!-- skill box -->
+      <div
+        class="container lg:w-4/5 xl:container 2xl:w-[70%] absolute h-full z-40 flex justify-center items-top sm:flex-row sm:justify-between sm:items-center"
+      >
+        <!-- single box -->
+        <SkillBox />
+      </div>
+    </div>
+  </div>
+
+  <!-- content -->
+  <div class="container xl:w-[70%] mx-auto px-2 md:px-0 mt-1 xl:mt-2">
+    <p class="givonic-reg text-center text-p text-lg md:text-2xl">
+      Im <span class="text-primary">Tresna Agustina</span>, I am a computer
+      technology student. I enjoy learning new things, especially about <span
+        class="text-primary">User Interface</span
+      > design and <span class="text-primary">Web Development</span>.
+    </p>
+
+    <!-- scroll down button -->
+    <div
+      class="flex justify-center items-center mt-8 flex-col cursor-pointer group"
+      id="downBtn"
+    >
+      <p class="text-p givonic-reg text-sm active:text-primary">scroll down</p>
+      <svg
+        width="26"
+        height="19"
+        viewBox="0 0 26 19"
+        class="fill-p group-active:fill-primary group-hover:fill-primary transition-all duration-300 rotate-180 animate-pulse"
+        fill="none"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          d="M1.74974 18.75H24.2497C24.4775 18.7493 24.7008 18.6865 24.8956 18.5683C25.0903 18.4501 25.2492 18.2811 25.355 18.0793C25.4608 17.8776 25.5096 17.6508 25.4961 17.4234C25.4826 17.196 25.4074 16.9766 25.2785 16.7888L14.0285 0.53876C13.5622 -0.13499 12.4397 -0.13499 11.9722 0.53876L0.722241 16.7888C0.592022 16.9762 0.515658 17.1957 0.501447 17.4235C0.487236 17.6513 0.53572 17.8786 0.641633 18.0808C0.747546 18.2829 0.906835 18.4522 1.1022 18.5702C1.29756 18.6882 1.52152 18.7504 1.74974 18.75Z"
+        ></path>
+      </svg>
+    </div>
+    <!-- end scroll down button -->
+  </div>
+</section>
