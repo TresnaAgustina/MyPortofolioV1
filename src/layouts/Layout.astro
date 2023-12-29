@@ -22,10 +22,25 @@ const { title } = Astro.props;
       <div
         class="splash-screen w-screen h-full fixed top-0 left-0 z-50 bg-secondary"
       >
-        <div class="w-full h-full flex items-center justify-center">
+        <!-- <div class="w-full h-full flex items-center justify-center">
           <div class="custom-loader"></div>
-        </div>
+        </div> -->
+        <svg class="load">
+          <text
+            class="load-text"
+            x="50%"
+            y="50%"
+            dy=".35em"
+            text-anchor="middle"
+          >
+            TRESNA</text
+          >
+        </svg>
       </div>
+
+      <!-- <div class="wrapper">
+        
+      </div> -->
       <slot />
     </main>
   </body>

@@ -168,3 +168,46 @@ img {
     transform: rotate(1turn);
   }
 }
+
+@import url("https://fonts.googleapis.com/css2?family=Goldman&display=swap");
+
+.load {
+  font-family: "Goldman", sans-serif;
+  width: 100%;
+  height: 100%;
+}
+.load-text {
+  animation: stroke 3s infinite alternate;
+  stroke-width: 2;
+  stroke: #e20e2b;
+  font-size: 76px;
+}
+@keyframes stroke {
+  0% {
+    fill: rgba(255, 26, 80, 0);
+    stroke: rgba(226, 14, 43, 1);
+    stroke-dashoffset: 25%;
+    stroke-dasharray: 0 50%;
+    stroke-width: 2;
+  }
+  70% {
+    fill: rgba(255, 26, 80, 0);
+    stroke: rgba(226, 14, 43, 1);
+  }
+  80% {
+    fill: rgba(255, 26, 80, 0);
+    stroke: rgba(226, 14, 43, 1);
+    stroke-width: 3;
+  }
+  100% {
+    fill: rgba(255, 26, 80, 1);
+    stroke: rgba(226, 14, 43, 0);
+    stroke-dashoffset: -25%;
+    stroke-dasharray: 50% 0;
+    stroke-width: 0;
+  }
+}
+
+.wrapper {
+  background-color: #ffffff;
+}

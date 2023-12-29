@@ -105,7 +105,7 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 
   // Tambahkan class 'hidden' setelah beberapa detik
-  setTimeout(hideSplashScreen, 2500);
+  setTimeout(hideSplashScreen, 3000);
 
   // Hapus class 'hidden' setelah animasi selesai
   splashScreen.addEventListener("transitionend", function () {
