@@ -18,6 +18,8 @@ module.exports = {
       purple_1: "#653DF9",
       orange_0: "#FFD3D4",
       orange_1: "#FC8D45",
+      gray_0: "#FFFFFF",
+      gray_1: "#D9D9D9",
     },
   },
   plugins: [],
