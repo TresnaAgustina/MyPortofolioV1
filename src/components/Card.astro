@@ -20,7 +20,7 @@ const { link, title, description, image, year, category, backgroundColor } =
     <!-- card image -->
     <a href={link} target="_blank">
       <div
-        class=`${backgroundColor} p-14 lg:p-20 img-wraper`
+        class=`${backgroundColor} p-14 img-wraper flex items-center justify-center`
         data-tilt
         data-tilt-glare
         data-tilt-scale="0.95"
@@ -31,7 +31,7 @@ const { link, title, description, image, year, category, backgroundColor } =
           alt=""
           class="h-32 lg:h-52 w-auto absolute z-0 rotate-[85deg] bottom-4 right-4"
         />
-        <img class="img-card" src={image} alt="" class="" />
+        <img class="img-card max-h-80 w-auto" src={image} alt="" />
       </div>
     </a>
 
